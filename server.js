@@ -11,3 +11,8 @@ app.use('/',htmlRoutes);
 app.listen(port,() => {
     console.log('API server live on port ${port}');
 });
+
+//middleware
+app.use(express.urlencoded({extended: true}));
+app.use(express.static(public));
+app.use(express.json());
